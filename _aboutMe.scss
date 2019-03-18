@@ -1,0 +1,33 @@
+.aboutMe h2 {
+    @include sectionTitle;
+}
+
+.about {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.flex {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 50px;
+}
+
+.paragraph {
+    margin-left: 5%;
+    padding-top: 6%;
+}
+
+.myPhoto {
+    width: 100%;
+}
+
+.about:before {
+    @include beforeGrey;
+}
+
+.about:after {
+    @include afterGrey;
+}
+

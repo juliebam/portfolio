@@ -1,0 +1,159 @@
+
+header {
+    padding-top: 15px;
+    padding-bottom: 50px;
+    position: relative;
+    .headingNav {
+        text-align: center;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+    }    
+}
+
+header::before{
+    @include beforeGrey;
+  }
+
+header::after{
+    @include afterGrey;
+  }
+
+
+.headingNav ul li {
+        display: inline-block;
+        font-family: $monts;
+        font-weight: 700;
+        padding: 0;
+        
+            a {
+                text-decoration: none;
+                padding: 10px 30px;
+                color: black;
+                transition: background-color 0.5s linear;
+            }
+            a:hover {
+                background: $gradient;
+                color: white;
+            }
+    }
+.hamburger {
+    display: none;
+}
+
+.menu {
+    padding-left: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+ul.navigator.open {
+        display: none;
+    }
+
+.show.navigator {
+        display: block;
+        width: 100%; 
+    }
+
+.landing {
+    background: $sectionColor;
+    padding: 20px 0;
+    height: 87vh;
+    position: relative;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.helloIam h1 {
+    font-size: 15rem;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-family: 'Cookie', cursive;
+}
+
+.firstP {
+    margin-bottom: 0;
+}
+
+.helloIam p {
+    padding-left: 10%;
+    font-size: 3.0rem;
+    font-weight: 700;
+}
+
+.helloIam img {
+    width: 30px;
+}
+
+.circle {
+    position: absolute;
+    left: 25%;
+    bottom: 50%;
+}
+
+.square {
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
+    transform: rotate(20deg);
+}
+
+.triangle {
+    position: absolute;
+    right: 30%;
+    bottom: 30%;
+    transform: rotate(80deg);
+}
+
+.circleStripes {
+    position: absolute;
+    right: 30%;
+    top: 25%;
+}
+
+.cross {
+    position: absolute;
+    right: 50%;
+    bottom: 10%;
+    transform: rotate(-20deg)
+}
+
+.triangleStripes {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: rotate(-220deg)
+}
+
+.hollowTraingle {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    transform: rotate(-60deg)
+}
+
+.zigzag {
+    position: absolute;
+    left: 60%;
+    bottom: 60%;
+    transform: rotate(-220deg)
+}
+
+.landing::before{
+    @include beforeWhite;
+  }
+  
+
+.landing::after{
+    @include afterWhite;
+  }

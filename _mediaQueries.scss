@@ -1,0 +1,243 @@
+//shape icons in the myWork section
+@media (max-width: 1560px) {
+    .projects .projectCard .circleStripes {
+        right: 6%;
+    }
+    .projects .projectCard .cross {
+        right: 7%;
+    }
+    .projects .projectCard .triangle {
+        right: 4%; 
+    }
+    .projects .projectCard .circle {
+        left: 95%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .projects .projectCard .hollowTraingle {
+        left: 3%;
+    }
+    .projects .projectCard .triangleStripes {
+        left: 5%;
+    }
+    .projects .projectCard .zigzag {
+        left: 2%;
+    }
+    .projects .projectCard .square {
+        left: 4%;
+    }
+}
+
+@media (max-width: 1375px) {
+    .projects .projectCard .cross {
+        right: 4%;
+    }
+}
+
+@media (max-width: 1325px) {
+    .projects .projectCard .triangleStripes {
+        left: 3%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .projects .projectCard .cross {
+        right: 1%;
+    }
+    .projects .projectCard .triangle {
+        right: 2%; 
+    }
+    .projects .projectCard .square {
+        left: 1%;
+    }
+}
+
+@media (max-width: 1270px) {
+    .projects .projectCard .circleStripes, .projects .projectCard .cross,.projects .projectCard .triangle, .projects .projectCard .circle, .projects .projectCard .hollowTraingle, .projects .projectCard .triangleStripes,  .projects .projectCard .zigzag, .projects .projectCard .square {
+        display: none;
+    }     
+}
+
+// shape icons in landing section 
+@media (max-width: 1420px) {
+    .landing .helloIam .square {
+        left: 20%;
+    }
+}
+
+@media (max-width: 1235px) {
+    .landing .helloIam .circle {
+        left: 16%;
+    }
+
+    .landing .helloIam .zigzag {
+        left: 80%;
+        top: 46%;
+    }
+}
+
+@media (max-width: 1235px) {
+    .landing .helloIam .circle {
+        left: 16%;
+    }
+
+    .landing .helloIam .zigzag {
+        left: 80%;
+        top: 46%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .landing .helloIam .cross {
+        bottom: 21%;
+    }
+}
+
+@media (max-width: 920px) {
+    .landing .helloIam .zigzag {
+        left: 86%;
+        top: 47%;
+    }
+
+    .landing .helloIam .triangle {
+        left: 83%;
+        top: 61%;;
+    }
+
+    .landing .helloIam .circle {
+        left: 8%;
+        top: 39%;
+    }
+
+    .landing .helloIam .square {
+        left: 13%;
+        bottom: 31%;
+    }
+}
+
+@media (max-width: 730px) {
+    .landing .helloIam .circle {
+        display: none;
+    }
+
+    .landing .helloIam .square {
+        display: none;
+    }
+
+    .landing .helloIam .zigzag {
+        left: 92%;
+    }
+}
+
+@media (max-width: 616px) {
+    .landing .helloIam .zigzag {
+        display: none;
+    }
+
+    .landing .helloIam .triangle {
+        display: none;
+    }
+
+    .landing .helloIam .hollowTraingle{
+        display: none;
+    }
+
+    .landing .helloIam .circleStripes {
+        display: none;
+    }
+
+    .landing .helloIam .triangleStripes {
+        display: none;
+    }
+
+    .landing .helloIam .cross {
+        display: none;
+    }
+}
+
+//Landing Section 
+
+@media (max-width: 500px) {
+    .helloIam h1 {
+        font-size: 12rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .helloIam h1 {
+        font-size: 10rem;
+    }
+
+    .helloIam p {
+        font-size: 2rem;
+    }
+
+    header .hamburger {
+        width: 30px;
+    }
+
+    header .menu {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 345px) {
+    .helloIam h1 {
+        font-size: 8rem;
+    }
+}
+
+//Hamburger Menu 
+
+@media (max-width: 800px) {
+    .hamburger {
+		display: block;
+    }
+   nav {
+        display: none;
+   } 
+}
+
+
+//About Me 
+
+@media (max-width: 945px) {
+    .myPhoto img {
+        margin: 0 auto;
+        width: 320px;
+    }
+
+    .flex {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding-bottom: 60px;
+    }
+}
+
+//My Work 
+
+@media (max-width: 1200px) {
+   .projects .projectCard {
+        border: none;
+        padding: 0 15px;
+    }
+
+    .projects {
+        row-gap: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .projects  {
+        grid-template-rows: repeat(4, auto);
+        grid-row-gap: 20px;
+        .projectCard {
+            grid-template-columns: auto;
+            grid-column-gap: 20px;
+        }
+    }       
+}

@@ -1,0 +1,80 @@
+.contactMe {
+    background: $sectionColor;
+    padding-bottom: 100px;
+    position: relative;
+        h2 {
+            margin-top: 0;
+            padding-top: 60px;
+            @include sectionTitle;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            transition: 0.2s linear;
+        }
+        a:hover {
+            color: $yellow;
+        }
+
+    .contactBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 100px;
+            form {
+                display: flex;
+                flex-direction: column;
+                    input {
+                        border: none;
+                        margin: 5px 0;
+                        padding: 10px;
+                    
+                    }
+                    textarea {
+                        border: none;
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                    }
+                    textarea:placeholder-shown {
+                        padding-top: 10px;
+                        padding-left: 10px;
+                    }
+
+                    input.submitButton {
+                        margin: 0 auto;
+                    }
+                    .submitButton {
+                        text-decoration: none;
+                        color: white;
+                        font-weight: 500;
+                        padding: 10px 30px;
+                        background: $gradient;
+                        border-radius: 50px;
+                        width: 40%;
+                    }
+                    .submitButton:hover {
+                        background:  linear-gradient( to right, #fccb11, #f41067);
+                    }
+            }
+    }
+}
+
+.contactIcons {
+    font-size: 60px;
+    color: $red;
+    padding-top: 30px;
+        a {
+            text-decoration: none;
+            color: $red;
+            padding: 20px 20px 0 0;
+        }
+}
+
+
+.contactMe:before {
+    @include beforeWhite;
+}
+
+.contactMe:after {
+    @include afterWhite;
+}

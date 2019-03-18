@@ -1,0 +1,36 @@
+
+.skills {
+        position: relative;
+        h2{
+            @include sectionTitle;
+        }
+        padding-bottom: 120px;
+        padding-top: 60px;
+    }
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 64px;
+    .icon {
+        border: 1px solid transparent;
+        font-size: 100px;
+        color: $yellow;
+        }
+    .box {
+        text-align: center;
+        p {
+            font-weight: 700;
+        }
+    }
+}
+
+.skills:before {
+    @include beforeGrey;
+}
+
+.skills:after {
+    @include afterGrey;
+}
