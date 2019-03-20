@@ -3,17 +3,19 @@
         position: relative;
         h2{
             @include sectionTitle;
+            margin-top: 0;
+            text-align: center;
         }
-        padding-bottom: 120px;
+        padding-bottom: 80px;
         padding-top: 60px;
     }
 
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-    row-gap: 64px;
+    grid-row-gap: 64px;
     .icon {
         border: 1px solid transparent;
         font-size: 100px;
@@ -24,9 +26,12 @@
         p {
             font-weight: 700;
         }
+    .firebase {
+        width: 43%;
+        margin: 0 auto;
+        }
     }
 }
-
 .skills:before {
     @include beforeGrey;
 }

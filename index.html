@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,500,700" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Julie Bam</title>
 </head>
 <body>
@@ -22,55 +28,55 @@
             </div>
             <nav class="headingNav">
                 <ul class="navigator">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="landing flexContainer">
+        <section class="landing flexContainer" id="home">
             <div class="helloIam">
-                <img src="assets/triangle.png" alt="" class="triangle">
-                <img src="assets/square.png" alt="" class="square">
-                <img src="assets/circle.png" alt="" class="circle">
-                <img src="assets/circleStripes.png" alt="" class="circleStripes">
-                <img src="assets/cross.png" alt="" class="cross">
-                <img src="assets/triangleStripes.png" alt="" class="triangleStripes">
-                <img src="assets/hollowTraingle.png" alt="" class="hollowTraingle">
-                <img src="assets/zigzag.png" alt="" class="zigzag">
+                <img src="assets/triangle.png" alt="" class="triangle rotate">
+                <img src="assets/square.png" alt="" class="square rotate">
+                <img src="assets/circle.png" alt="" class="circle rotate">
+                <img src="assets/circleStripes.png" alt="" class="circleStripes rotate">
+                <img src="assets/cross.png" alt="" class="cross rotate">
+                <img src="assets/triangleStripes.png" alt="" class="triangleStripes rotate">
+                <img src="assets/hollowTraingle.png" alt="" class="hollowTraingle rotate">
+                <img src="assets/zigzag.png" alt="" class="zigzag rotate">
                 <p class="firstP">Hello, I am</p>
                 <h1>Julie Bam</h1>
                 <p>Front-End Developer</p>
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="aboutMe wrapper">
-                <h2>About me</h2>
-                    <div class="flex">
-                        <div class="myPhoto">
+                    <h2 class="hiddenOnDesktop">About me</h2>
+                    <div class="flex">    
+                        <div class="myPhoto"  data-aos="fade-up-right" data-aos-offset="300"  data-aos-easing="ease-in" data-aos-duration="1000" >
                             <img src="assets/ProfilePic.png" alt="Julie Bam's photo">
                         </div>
 
-                        <div class="paragraph">
+                        <div class="paragraph" data-aos="fade-up-left" data-aos-offset="300"  data-aos-easing="ease-in" data-aos-duration="1000">
+                            <h2 class="hiddenOnMobile">About me</h2>
                             <p>Hi! My name is Julie. I am a Toronto based Front-End Developer. I love to solve problems using clean, semantic code and solid logic. I am passionate about creating interactive web experiences that inspire and engage users.</p> 
 
-                            <p>I have a Bachelor's degree in Science and in the past I have worked in the pharmaceutical industry in different capacities, mainly in quality control and sterilization validation/sterility assurance. I also love anything art related and I like to be creative. I felt I could merge my interest in science and technology with art and creativity into one focus: web development.</p>
+                            <p>I have a Bachelor's degree in Science and in the past I have worked in the pharmaceutical industry in different capacities, mainly in quality control and sterilization validation/sterility assurance. I also love anything art related and I like to be creative. I feel I could merge my interest in science and technology with art and creativity into one focus: web development.</p>
                         </div>
                     </div>
                 </div>
         </section>
 
-        <section class="myWork">
+        <section class="myWork" id="portfolio">
             <h2>My work</h2>
             <div class="projects wrapper">
-                <div class="projectCard">
-                        <img src="assets/triangle.png" alt="" class="triangle">
-                        <img src="assets/square.png" alt="" class="square">
+                <div class="projectCard reverse" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="description rightAlign">
                         <h3>Ethical Makeup</h3>
                         <h4>React & Firebase App</h4>
@@ -83,9 +89,8 @@
                     </div>   
                 </div>
 
-                <div class="projectCard">
-                        <img src="assets/circle.png" alt="" class="circle">
-                        <img src="assets/circleStripes.png" alt="" class="circleStripes">
+                <div class="projectCard" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="image">
                             <img src="assets/react.png" alt="Screenview of React project">
                             <p> React | API | JavaScript | HTML5 | CSS3 | Responsive Design </p>
@@ -98,10 +103,8 @@
                     </div>
                 </div>
 
-                <div class="projectCard">
-                        <img src="assets/cross.png" alt="" class="cross">
-                        <img src="assets/triangleStripes.png" alt="" class="triangleStripes">
-                        <img src="assets/zigzag.png" alt="" class="zigzag">
+                <div class="projectCard reverse" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="description rightAlign">
                         <h3>8<sup>th</sup> Grade Science Quiz</h3>
                         <h4>Javascript Game</h4>
@@ -113,9 +116,8 @@
                         <p> JavaScript | jQuery | HTML5 | CSS3 | Sass | Responsive Design</p>
                     </div>
                 </div>
-                <div class="projectCard">
-                        <img src="assets/hollowTraingle.png" alt="" class="hollowTraingle">
-                        <img src="assets/zigzag.png" alt="" class="zigzag">
+                <div class="projectCard" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="image">
                         <img src="assets/psd.jpg" alt="Screenview of PSD conversion project">
                         <p> HTML5 | CSS3 | Sass | Responsive Design </p>
@@ -124,13 +126,13 @@
                         <h3>Planted</h3>
                         <h4>Multipage PSD Conversion</h4>
                         <p>A fully responsive, pixel perfect conversion from a psd file.</p>
-                        <a href="http://www.juliebam.com/psdconversion/">View Live</a>
+                        <a href="http://www.juliebam.com/Project2/">View Live</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills">
                 <div class="wrapper">
                     <h2>Skills</h2>
                     <div class="container">
@@ -166,56 +168,68 @@
                             <i class="fab fa-github icon"></i>
                             <p>Github</p>
                         </div>
-                        <div class="box nine">
+                        <!-- <div class="box nine">
                             <i class="fas fa-user-friends icon"></i>
                             <p>Pair Programming</p>
-                        </div>
+                        </div> -->
                         <!-- <div class="box ten"> 
                             <i class="devicon-visualstudio-plain icon"></i>
                             <p>VS Code</p>
                         </div> -->
-                        <div class="box eleven">
+                        <!-- <div class="box eleven">
                                 <svg height="100" viewBox="0 0 32 32" width="100" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.0881542 0 0 .0881542 -6.565223 -6.564465)"><path d="m297.036 205.578-36.334 33.809-33.716-68.005 17.446-39.108c4.416-7.84 11.621-7.855 16.037 0z" fill="#ffa000"/><path d="m226.986 171.381 33.716 68.005-135.778 126.311z" fill="#f57f17"/><path d="m336.776 153.901c6.491-6.239 13.202-4.111 14.912 4.729l35.342 205.375-117.157 70.215c-4.1 2.264-14.957 3.246-14.957 3.246s-9.91-1.185-13.687-3.281l-116.309-68.495z" fill="#ffca28"/><path d="m226.986 171.381-102.062 194.316 45.46-283.998c1.674-8.847 6.71-9.699 11.203-1.89z" fill="#ffa000"/></g></svg>
                                 <p>Firebase</p>
-                            </div> 
-                    </div>
-                   
+                            </div>  -->
+                        <!-- <div class="box">
+                            <img src="assets/firebase.svg" class="firebase" alt="firebase icon">
+                            <p>Firebase</p>
+                        </div> -->
+                    </div>     
             </section>
 
-        <section class="contactMe">
+        <section class="contactMe" id="contact">
+                <img src="assets/circle.png" alt="" class="circleC">
+                <img src="assets/circleStripes.png" alt="" class="circleStripesC">
+                <img src="assets/triangle.png" alt="" class="triangleC">
+                <img src="assets/square.png" alt="" class="squareC">
+                <img src="assets/cross.png" alt="" class="crossC">
+                <img src="assets/triangleStripes.png" alt="" class="triangleStripesC">
+                <img src="assets/hollowTraingle.png" alt="" class="hollowTraingleC">
+                <img src="assets/zigzag.png" alt="" class="zigzagC">
             <div class="wrapper">
                 <h2>Get in Touch</h2>
                 <div class="contactBox">
-                    <div class="gridUnit">
+                    <div class="container">
                         <div class="email">
-                            <h3>Contact Me</h3>
-                            <a href="">contact@juliebam.com</a>
+                            <a href="mailto:contact@juliebam.com">contact@juliebam.com</a>
                         </div>
+                        <form class="contactForm" method="POST" action="http://www.focuspocus.io/magic/julie.bam1985@gmail.com">
+                            <label for="name" class="visuallyHidden">Name</label>
+                            <input type="text" name="text" placeholder="Name" id="name">
+                            <label for="email" class="visuallyHidden">Email</label>
+                            <input type="email" name="email" placeholder="Email" id="email">
+                            <label for="text" class="visuallyHidden">Your message</label>
+                            <textarea style="resize: none" name="textarea" rows="4" cols="5" placeholder="Your message" id="text"></textarea>
+                            <input type="submit" class="submitButton" name="submit" value="Send message">
+                        </form>
                         <div class="contactIcons">
                             <a href="https://twitter.com/JulieBam6"><i class="fab fa-twitter-square"></i></a>
                             <a href="https://www.linkedin.com/in/julie-bam-73a60018/"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/juliebam"><i class="fab fa-github-square"></i></a>
                         </div>
                     </div>
-                    <form>
-                        <label for="name" class="visuallyHidden">Name</label>
-                        <input type="text" placeholder="Name" id="name">
-                        <label for="email" class="visuallyHidden">Email</label>
-                        <input type="email" placeholder="Email" id="email">
-                        <label for="text" class="visuallyHidden">Your message</label>
-                        <textarea style="resize: none"  rows="4" cols="5" placeholder="Your message" id="text"></textarea>
-                        <input type="submit" class="submitButton" value="Send message">
-                     </form>
-                </div>
-                
-                
+                </div>     
             </div>
         </section>
     </main>
     <footer>
-        <p>Julie Bam &copy 2019 | headshot credit: Pam Lau</p>
+        <p>Deveoped by Julie Bam | headshot credit: Pam Lau</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script> 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

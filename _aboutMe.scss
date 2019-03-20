@@ -1,10 +1,15 @@
 .aboutMe h2 {
     @include sectionTitle;
+    margin: 0;
+}
+
+.hiddenOnDesktop {
+    display: none;
 }
 
 .about {
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 }
 
 .flex {
@@ -12,15 +17,17 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 50px;
+    padding-top: 30px;
 }
 
 .paragraph {
     margin-left: 5%;
-    padding-top: 6%;
+    padding-top: 14%;
 }
 
 .myPhoto {
     width: 100%;
+    margin-top: 10%;
 }
 
 .about:before {

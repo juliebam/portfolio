@@ -1,62 +1,52 @@
-//shape icons in the myWork section
-@media (max-width: 1560px) {
-    .projects .projectCard .circleStripes {
-        right: 6%;
-    }
-    .projects .projectCard .cross {
-        right: 7%;
-    }
-    .projects .projectCard .triangle {
-        right: 4%; 
-    }
-    .projects .projectCard .circle {
-        left: 95%;
-    }
+//shape icons in the contact section
+
+
+.squareC {
+    position: absolute;
+    left: 5%;
+    bottom: 45%;
+    transform: rotate(20deg);
 }
 
-@media (max-width: 1500px) {
-    .projects .projectCard .hollowTraingle {
-        left: 3%;
-    }
-    .projects .projectCard .triangleStripes {
-        left: 5%;
-    }
-    .projects .projectCard .zigzag {
-        left: 2%;
-    }
-    .projects .projectCard .square {
-        left: 4%;
-    }
+.triangleC {
+    position: absolute;
+    right: 10%;
+    bottom: 35%;
+    transform: rotate(80deg);
 }
 
-@media (max-width: 1375px) {
-    .projects .projectCard .cross {
-        right: 4%;
-    }
+.circleStripesC {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: rotate(30deg)
 }
 
-@media (max-width: 1325px) {
-    .projects .projectCard .triangleStripes {
-        left: 3%;
-    }
+.crossC {
+    position: absolute;
+    right: 25%;
+    bottom: 10%;
+    transform: rotate(30deg)
 }
 
-@media (max-width: 1290px) {
-    .projects .projectCard .cross {
-        right: 1%;
-    }
-    .projects .projectCard .triangle {
-        right: 2%; 
-    }
-    .projects .projectCard .square {
-        left: 1%;
-    }
+.hollowTraingleC {
+    position: absolute;
+    left: 18%;
+    top: 20%;
+    transform: rotate(130deg)
 }
 
-@media (max-width: 1270px) {
-    .projects .projectCard .circleStripes, .projects .projectCard .cross,.projects .projectCard .triangle, .projects .projectCard .circle, .projects .projectCard .hollowTraingle, .projects .projectCard .triangleStripes,  .projects .projectCard .zigzag, .projects .projectCard .square {
-        display: none;
-    }     
+.zigzagC {
+    position: absolute;
+    right: 7%;
+    bottom: 65%;
+    transform: rotate(-220deg)
+}
+
+@media (max-width: 610px){
+        .triangleC, .squareC, .circleC, .circleStripesC, .crossC, .hollowTraingleC, .triangleStripesC, .hollowTraingleC, .zigzagC {
+            display: none;
+    }
 }
 
 // shape icons in landing section 
@@ -83,8 +73,8 @@
     }
 
     .landing .helloIam .zigzag {
-        left: 80%;
-        top: 46%;
+        left: 75%;
+        top: 63%;
     }
 }
 
@@ -158,6 +148,12 @@
 
 //Landing Section 
 
+@media (max-width: 800px) {
+    header {
+        padding-top: 0;
+    }
+}
+
 @media (max-width: 500px) {
     .helloIam h1 {
         font-size: 12rem;
@@ -191,21 +187,76 @@
 //Hamburger Menu 
 
 @media (max-width: 800px) {
+    header {
+        position: relative;
+        padding-bottom: 60px;
+    }
     .hamburger {
 		display: block;
     }
-   nav {
+
+    .show.navigator {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.navigator {
         display: none;
+        position: absolute;
+        top: 55px;
+        left: 30px;
+        z-index: 1;
+        width: 100%;
+        text-align: left;
    } 
+
+   ul.navigator li {
+       padding: 5px 0;
+   }
+
+   ul.navigator li a {
+        padding: 5px 15px;
+   }
 }
 
-
+@media (max-width: 410px) {
+    ul.navigator li a {
+        font-size: 1.6rem;
+    }
+}
 //About Me 
 
 @media (max-width: 945px) {
+
+    .hiddenOnDesktop {
+        display: block;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .hiddenOnMobile {
+        display: none;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
     .myPhoto img {
         margin: 0 auto;
         width: 320px;
+    }
+
+    .myWork h2 {
+        padding-top: 0;
+    }
+
+    .myPhoto {
+        margin-top: 0;
+    }
+
+    .paragraph {
+        padding-top: 5%;
     }
 
     .flex {
@@ -227,17 +278,88 @@
     }
 
     .projects {
-        row-gap: 0;
+        grid-row-gap: 0;
     }
 }
 
 @media (max-width: 950px) {
-    .projects  {
-        grid-template-rows: repeat(4, auto);
-        grid-row-gap: 20px;
-        .projectCard {
-            grid-template-columns: auto;
-            grid-column-gap: 20px;
-        }
-    }       
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects .projectCard {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectCard.reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .description {
+        margin: 0 25%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image {
+        margin-top: 40px;
+    }
+
+    .image p {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .myWork h2 {
+        padding: 60px 0 0 0;        
+    }
+
+    .projects .projectCard .rightAlign {
+        text-align: center;
+    }
+
+    .myWork {
+        padding-bottom: 100px;
+    }
+} 
+@media (max-width: 535px) {
+    .description {
+        margin: 0 15%;
+    }
+
+    .image p {
+        font-size: 1.6rem;
+    }
 }
+
+// My skills
+
+@media (max-width: 750px) {
+    .container .icon{
+        font-size: 70px;
+    }
+
+    .box p {
+        display: none;
+    }
+    
+    .eleven {
+        svg {
+            height: 70;
+            width: 70;
+        }
+    }
+}
+    
+
+// Contact Me 
+
+@media (max-width: 465px) {
+    .contactMe form input {
+        width: 100%;
+    } 
+}
+

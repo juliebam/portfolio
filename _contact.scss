@@ -1,12 +1,13 @@
 .contactMe {
     background: $sectionColor;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     position: relative;
         h2 {
             margin-top: 0;
             padding-top: 60px;
             @include sectionTitle;
             text-align: center;
+            margin-bottom: 20px;
         }
         a {
             text-decoration: none;
@@ -17,56 +18,66 @@
             color: $yellow;
         }
 
-    .contactBox {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 100px;
-            form {
-                display: flex;
-                flex-direction: column;
-                    input {
-                        border: none;
-                        margin: 5px 0;
-                        padding: 10px;
-                    
-                    }
-                    textarea {
-                        border: none;
-                        margin-top: 5px;
-                        margin-bottom: 20px;
-                    }
-                    textarea:placeholder-shown {
-                        padding-top: 10px;
-                        padding-left: 10px;
-                    }
+       .container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
 
-                    input.submitButton {
-                        margin: 0 auto;
+        form {
+            display: flex;
+            flex-direction: column;
+                input {
+                    width: 400px;
+                    border: none;
+                    margin: 5px 0;
+                    padding: 10px;
+                }
+
+                textarea {
+                    border: none;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                    height: 200px;
+                }
+
+                textarea:placeholder-shown {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                }
+
+                input.submitButton {
+                    margin: 0 auto;
+                }
+
+                .submitButton {
+                    text-decoration: none;
+                    position: relative;
+                    color: white;
+                    font-weight: 500;
+                    padding: 10px 15px;
+                    background: $gradient;
+                    border-radius: 50px;
+                    width: 60%;
+                    z-index: 1;
+                }
+
+                .submitButton:hover {
+                    background: linear-gradient( to right, #fccb11, #f41067);
                     }
-                    .submitButton {
-                        text-decoration: none;
-                        color: white;
-                        font-weight: 500;
-                        padding: 10px 30px;
-                        background: $gradient;
-                        border-radius: 50px;
-                        width: 40%;
-                    }
-                    .submitButton:hover {
-                        background:  linear-gradient( to right, #fccb11, #f41067);
-                    }
+                }
             }
-    }
-}
+        
+
 
 .contactIcons {
-    font-size: 60px;
+    font-size: 40px;
+    // margin: -30px 0;
     color: $red;
-    padding-top: 30px;
+    text-align: center;
         a {
             text-decoration: none;
             color: $red;
-            padding: 20px 20px 0 0;
         }
 }
 
@@ -77,4 +88,65 @@
 
 .contactMe:after {
     @include afterWhite;
+}
+
+
+
+.circleC {
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+}
+
+.squareC {
+    position: absolute;
+    left: 15%;
+    bottom: 45%;
+    transform: rotate(20deg);
+}
+
+.triangleC {
+    position: absolute;
+    right: 15%;
+    bottom: 35%;
+    transform: rotate(80deg);
+}
+
+.circleStripesC {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: rotate(30deg)
+}
+
+.crossC {
+    position: absolute;
+    right: 25%;
+    bottom: 10%;
+    transform: rotate(30deg)
+}
+
+.triangleStripesC {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    transform: rotate(-220deg)
+}
+
+.hollowTraingleC {
+    position: absolute;
+    left: 18%;
+    top: 25%;
+    transform: rotate(130deg)
+}
+
+.zigzagC {
+    position: absolute;
+    right: 20%;
+    bottom: 65%;
+    transform: rotate(-220deg)
+}
+
+.triangleC, .squareC, .circleC, .circleStripesC, .crossC, .hollowTraingleC, .triangleStripesC, .hollowTraingleC, .zigzagC {
+    width: 30px;
 }

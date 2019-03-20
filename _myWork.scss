@@ -1,13 +1,13 @@
 .myWork {
     background: $sectionColor;
-    padding-bottom: 130px;
+    padding-bottom: 70px;
+    position: relative;
     h2 {
         margin: 0;
         padding: 60px 0;
         @include sectionTitle;
         text-align: center;
     }
-    position: relative;
 }
 
 .myWork:before {
@@ -21,7 +21,7 @@
 .projects{
     display: grid;
     grid-template-rows: repeat(4, 400px);
-    row-gap: 50px;
+    grid-row-gap: 50px;
     .projectCard {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -42,83 +42,36 @@
 
             a {
                 text-decoration: none;
+                position: relative;
                 color: white;
                 font-weight: 500;
                 padding: 10px 30px;
                 background: $gradient;
                 border-radius: 50px;
                 transition: all 0.2s linear;
+                z-index: 1;
             }
-
-            a:hover {
-                background:  linear-gradient( to right, #fccb11, #f41067);
+            a::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background:linear-gradient( to right, #fccb11, #f41067);
+                border-radius: 50px;
+                z-index: -1;
+                transition: opacity 0.5s linear;
+                opacity: 0;
+            }
+            a:hover::before {
+                opacity: 1;
             }
 
             .image p {
                 margin-bottom: 0;
             }      
-            
-            .triangle, .square, .circle, .circleStripes, .cross, .hollowTraingle, .triangleStripes, .hollowTraingle, .zigzag {
-                width: 30px;
-            }
-
-            .circle {
-                position: absolute;
-                left: 87%;
-                bottom: 20%;
-            }
-            
-            .square {
-                position: absolute;
-                left: 8%;
-                bottom: 10%;
-                transform: rotate(20deg);
-            }
-            
-            .triangle {
-                position: absolute;
-                right: 10%;
-                bottom: 50%;
-                transform: rotate(80deg);
-            }
-            
-            .circleStripes {
-                position: absolute;
-                right: 14%;
-                top: 6%;
-                transform: rotate(30deg)
-            }
-            
-            .cross {
-                position: absolute;
-                right: 10%;
-                bottom: 70%;
-                transform: rotate(30deg)
-            }
-            
-            .triangleStripes {
-                position: absolute;
-                left: 10%;
-                top: 30%;
-                transform: rotate(-220deg)
-            }
-            
-            .hollowTraingle {
-                position: absolute;
-                left: 10%;
-                top: 5%;
-                transform: rotate(130eg)
-            }
-            
-            .zigzag {
-                position: absolute;
-                left: 5%;
-                bottom: 40%;
-                transform: rotate(-220deg)
-            }
-            
     }
 }
-
 
 

@@ -1,7 +1,7 @@
 
 header {
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     position: relative;
     .headingNav {
         text-align: center;
@@ -30,18 +30,35 @@ header::after{
         
             a {
                 text-decoration: none;
+                position:relative;
                 padding: 10px 30px;
                 color: black;
-                transition: background-color 0.5s linear;
+                background: transparent;
+                transition: all 0.2s linear;
+                z-index: 1;
             }
+
             a:hover {
-                background: $gradient;
                 color: white;
             }
+
+            a::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: $gradient;
+                z-index: -1;
+                transition: opacity 0.8s linear;
+                opacity: 0;
+            }
+
+            a:hover::before {
+                opacity: 1;
+            }
     }
-.hamburger {
-    display: none;
-}
 
 .menu {
     padding-left: 50px;
@@ -53,15 +70,14 @@ ul.navigator.open {
         display: none;
     }
 
-.show.navigator {
-        display: block;
-        width: 100%; 
-    }
+.hamburger {
+    display: none;
+}
 
 .landing {
     background: $sectionColor;
     padding: 20px 0;
-    height: 87vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -75,8 +91,10 @@ ul.navigator.open {
 .helloIam h1 {
     font-size: 15rem;
     background: $gradient;
+    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
     margin: 0;
     font-family: 'Cookie', cursive;
 }
@@ -97,8 +115,8 @@ ul.navigator.open {
 
 .circle {
     position: absolute;
-    left: 25%;
-    bottom: 50%;
+    top: 35%;
+    left: 20%;
 }
 
 .square {
@@ -110,28 +128,28 @@ ul.navigator.open {
 
 .triangle {
     position: absolute;
-    right: 30%;
-    bottom: 30%;
-    transform: rotate(80deg);
+    right: 37%;
+    bottom: 15%;
+    transform: rotate(0deg);
 }
 
 .circleStripes {
     position: absolute;
-    right: 30%;
-    top: 25%;
+    right: 20%;
+    top: 40%;
 }
 
 .cross {
     position: absolute;
-    right: 50%;
-    bottom: 10%;
+    right: 70%;
+    bottom: 20%;
     transform: rotate(-20deg)
 }
 
 .triangleStripes {
     position: absolute;
-    left: 50%;
-    top: 15%;
+    left: 59%;
+    top: 19%;
     transform: rotate(-220deg)
 }
 
@@ -144,10 +162,60 @@ ul.navigator.open {
 
 .zigzag {
     position: absolute;
-    left: 60%;
-    bottom: 60%;
+    left: 68%;
+    top: 76%;
     transform: rotate(-220deg)
 }
+
+.rotate{
+    -moz-transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
+}
+
+.rotate.move{
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+}
+
+@-webkit-keyframes move {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes move {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .move {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
 
 .landing::before{
     @include beforeWhite;
