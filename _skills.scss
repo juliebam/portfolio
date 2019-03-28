@@ -10,6 +10,9 @@
         padding-top: 60px;
     }
 
+.hidden {
+    display: none;
+}
 
 .container {
     display: grid;
@@ -21,6 +24,7 @@
         font-size: 100px;
         color: $yellow;
         }
+    
     .box {
         text-align: center;
         p {
@@ -29,6 +33,11 @@
     .firebase {
         width: 43%;
         margin: 0 auto;
+        }
+    .command {
+        font-size: 95px;
+        font-weight: 300;
+        color: $yellow;
         }
     }
 }

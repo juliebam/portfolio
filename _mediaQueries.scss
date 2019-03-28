@@ -50,101 +50,38 @@
 }
 
 // shape icons in landing section 
-@media (max-width: 1420px) {
+ 
+@media (max-width: 1100px) {
     .landing .helloIam .square {
-        left: 20%;
+        left: 19%;
     }
 }
-
-@media (max-width: 1235px) {
-    .landing .helloIam .circle {
-        left: 16%;
-    }
-
-    .landing .helloIam .zigzag {
-        left: 80%;
-        top: 46%;
-    }
-}
-
-@media (max-width: 1235px) {
-    .landing .helloIam .circle {
-        left: 16%;
-    }
-
-    .landing .helloIam .zigzag {
-        left: 75%;
-        top: 63%;
-    }
-}
-
-@media (max-width: 1080px) {
-    .landing .helloIam .cross {
-        bottom: 21%;
-    }
-}
-
-@media (max-width: 920px) {
-    .landing .helloIam .zigzag {
-        left: 86%;
-        top: 47%;
-    }
-
-    .landing .helloIam .triangle {
-        left: 83%;
-        top: 61%;;
-    }
-
-    .landing .helloIam .circle {
-        left: 8%;
-        top: 39%;
-    }
-
+@media (max-width: 1000px) {
     .landing .helloIam .square {
-        left: 13%;
-        bottom: 31%;
-    }
-}
-
-@media (max-width: 730px) {
-    .landing .helloIam .circle {
-        display: none;
-    }
-
-    .landing .helloIam .square {
-        display: none;
-    }
-
-    .landing .helloIam .zigzag {
-        left: 92%;
-    }
-}
-
-@media (max-width: 616px) {
-    .landing .helloIam .zigzag {
-        display: none;
-    }
-
-    .landing .helloIam .triangle {
-        display: none;
-    }
-
-    .landing .helloIam .hollowTraingle{
-        display: none;
-    }
-
-    .landing .helloIam .circleStripes {
-        display: none;
+        left: 17%;
     }
 
     .landing .helloIam .triangleStripes {
-        display: none;
+        right: 85%;
     }
 
-    .landing .helloIam .cross {
-        display: none;
+    .landing .helloIam .circleStripes {
+        right: 22%;
+        top: 13%;
+    }
+
+    .landing .helloIam .zigzag {
+        left: 79%;
     }
 }
+
+
+@media (max-width: 500px) {
+    .helloIam img {
+        width: 20px;
+    }
+}
+
 
 //Landing Section 
 
@@ -325,6 +262,20 @@
         padding-bottom: 100px;
     }
 } 
+@media (max-width: 575px) {
+    .aFlex {
+        display: flex;
+        flex-direction: column;
+            a {
+                margin-top: 5px;
+            }
+    }
+    .projects .projectCard .live {
+        margin-right: 0;
+    }
+}
+
+
 @media (max-width: 535px) {
     .description {
         margin: 0 15%;
@@ -346,11 +297,12 @@
         display: none;
     }
     
-    .eleven {
-        svg {
-            height: 70;
-            width: 70;
-        }
+    .nine, .eleven, .twelve {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
     }
 }
     

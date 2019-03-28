@@ -45,7 +45,7 @@
                 position: relative;
                 color: white;
                 font-weight: 500;
-                padding: 10px 30px;
+                padding: 8px 30px;
                 background: $gradient;
                 border-radius: 50px;
                 transition: all 0.2s linear;
@@ -66,6 +66,11 @@
             }
             a:hover::before {
                 opacity: 1;
+            }
+
+            .live {
+                padding: 8px 42px;
+                margin-right: 10px;
             }
 
             .image p {

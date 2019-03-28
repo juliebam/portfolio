@@ -297,24 +297,17 @@ ul.navigator.open {
   font-weight: 700; }
 
 .helloIam img {
-  width: 30px; }
-
-.circle {
-  position: absolute;
-  top: 35%;
-  left: 20%; }
+  width: 30px;
+  opacity: 0.35; }
 
 .square {
   position: absolute;
-  left: 30%;
-  bottom: 30%;
-  -webkit-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(20deg); }
+  top: 25%;
+  left: 25%; }
 
-.triangle {
+.hollowSquare {
   position: absolute;
-  right: 37%;
+  right: 55%;
   bottom: 15%;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -322,8 +315,8 @@ ul.navigator.open {
 
 .circleStripes {
   position: absolute;
-  right: 20%;
-  top: 40%; }
+  right: 32%;
+  top: 20%; }
 
 .cross {
   position: absolute;
@@ -335,8 +328,8 @@ ul.navigator.open {
 
 .triangleStripes {
   position: absolute;
-  left: 59%;
-  top: 19%;
+  right: 75%;
+  top: 70%;
   -webkit-transform: rotate(-220deg);
   -ms-transform: rotate(-220deg);
   transform: rotate(-220deg); }
@@ -369,36 +362,24 @@ ul.navigator.open {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg); }
 
-@-webkit-keyframes move {
-  from {
+.rotate.move {
+  -webkit-animation: spin 9s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
     -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-@keyframes move {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
+@keyframes spin {
+  0% {
     -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
+  100% {
     -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
-.move {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite; }
 
 .landing::before {
   content: "";
@@ -548,7 +529,7 @@ ul.navigator.open {
       position: relative;
       color: white;
       font-weight: 500;
-      padding: 10px 30px;
+      padding: 8px 30px;
       background: -webkit-gradient(linear, left top, right top, from(#f41067), to(#fccb11));
       background: -webkit-linear-gradient(left, #f41067, #fccb11);
       background: -o-linear-gradient(left, #f41067, #fccb11);
@@ -577,6 +558,9 @@ ul.navigator.open {
       opacity: 0; }
     .projects .projectCard a:hover::before {
       opacity: 1; }
+    .projects .projectCard .live {
+      padding: 8px 42px;
+      margin-right: 10px; }
     .projects .projectCard .image p {
       margin-bottom: 0; }
 
@@ -590,6 +574,9 @@ ul.navigator.open {
     color: #f41067;
     margin-top: 0;
     text-align: center; }
+
+.hidden {
+  display: none; }
 
 .container {
   display: -ms-grid;
@@ -610,6 +597,10 @@ ul.navigator.open {
     .container .box .firebase {
       width: 43%;
       margin: 0 auto; }
+    .container .box .command {
+      font-size: 95px;
+      font-weight: 300;
+      color: #fccb11; }
 
 .skills:before {
   content: "";
@@ -789,13 +780,13 @@ ul.navigator.open {
   -ms-transform: rotate(-220deg);
   transform: rotate(-220deg); }
 
-.hollowTraingleC {
+.hollowSquareC {
   position: absolute;
   left: 18%;
   top: 25%;
-  -webkit-transform: rotate(130deg);
-  -ms-transform: rotate(130deg);
-  transform: rotate(130deg); }
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg); }
 
 .zigzagC {
   position: absolute;
@@ -805,8 +796,9 @@ ul.navigator.open {
   -ms-transform: rotate(-220deg);
   transform: rotate(-220deg); }
 
-.triangleC, .squareC, .circleC, .circleStripesC, .crossC, .hollowTraingleC, .triangleStripesC, .hollowTraingleC, .zigzagC {
-  width: 30px; }
+.triangleC, .squareC, .circleC, .circleStripesC, .crossC, .hollowTraingleC, .triangleStripesC, .hollowTraingleC, .zigzagC .hollowSquareC {
+  width: 30px;
+  opacity: 0.35; }
 
 footer {
   text-align: center; }
@@ -863,63 +855,24 @@ footer {
   .triangleC, .squareC, .circleC, .circleStripesC, .crossC, .hollowTraingleC, .triangleStripesC, .hollowTraingleC, .zigzagC {
     display: none; } }
 
-@media (max-width: 1420px) {
+@media (max-width: 1100px) {
   .landing .helloIam .square {
-    left: 20%; } }
+    left: 19%; } }
 
-@media (max-width: 1235px) {
-  .landing .helloIam .circle {
-    left: 16%; }
-  .landing .helloIam .zigzag {
-    left: 80%;
-    top: 46%; } }
-
-@media (max-width: 1235px) {
-  .landing .helloIam .circle {
-    left: 16%; }
-  .landing .helloIam .zigzag {
-    left: 75%;
-    top: 63%; } }
-
-@media (max-width: 1080px) {
-  .landing .helloIam .cross {
-    bottom: 21%; } }
-
-@media (max-width: 920px) {
-  .landing .helloIam .zigzag {
-    left: 86%;
-    top: 47%; }
-  .landing .helloIam .triangle {
-    left: 83%;
-    top: 61%; }
-  .landing .helloIam .circle {
-    left: 8%;
-    top: 39%; }
+@media (max-width: 1000px) {
   .landing .helloIam .square {
-    left: 13%;
-    bottom: 31%; } }
-
-@media (max-width: 730px) {
-  .landing .helloIam .circle {
-    display: none; }
-  .landing .helloIam .square {
-    display: none; }
-  .landing .helloIam .zigzag {
-    left: 92%; } }
-
-@media (max-width: 616px) {
-  .landing .helloIam .zigzag {
-    display: none; }
-  .landing .helloIam .triangle {
-    display: none; }
-  .landing .helloIam .hollowTraingle {
-    display: none; }
-  .landing .helloIam .circleStripes {
-    display: none; }
+    left: 17%; }
   .landing .helloIam .triangleStripes {
-    display: none; }
-  .landing .helloIam .cross {
-    display: none; } }
+    right: 85%; }
+  .landing .helloIam .circleStripes {
+    right: 22%;
+    top: 13%; }
+  .landing .helloIam .zigzag {
+    left: 79%; } }
+
+@media (max-width: 500px) {
+  .helloIam img {
+    width: 20px; } }
 
 @media (max-width: 800px) {
   header {
@@ -1054,6 +1007,20 @@ footer {
   .myWork {
     padding-bottom: 100px; } }
 
+@media (max-width: 575px) {
+  .aFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .aFlex a {
+      margin-top: 5px; }
+  .projects .projectCard .live {
+    margin-right: 0; } }
+
 @media (max-width: 535px) {
   .description {
     margin: 0 15%; }
@@ -1065,9 +1032,10 @@ footer {
     font-size: 70px; }
   .box p {
     display: none; }
-  .eleven svg {
-    height: 70;
-    width: 70; } }
+  .nine, .eleven, .twelve {
+    display: none; }
+  .hidden {
+    display: block; } }
 
 @media (max-width: 465px) {
   .contactMe form input {

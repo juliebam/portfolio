@@ -4,13 +4,14 @@ $(document).ready(function(){
         $(this).toggleClass('open');
         $('ul.navigator').toggleClass('show');
     });
-    $('.landing').mouseover(function(){
+    $('.landing').mouseenter(function(){
         console.log('the mouse is moving');
-        $('.triangle, .square, .circle, .circleStripes, .cross, .hollowTraingle, .triangleStripes, .hollowTraingle, .zigzag').toggleClass("move");
+        $('.triangle, .square, .hollowSquare, .circleStripes, .cross, .hollowTraingle, .triangleStripes, .hollowTraingle, .zigzag, .zigzagTwo').toggleClass("move");
+    });
+    $('.landing').mouseleave(function(){
+        console.log('the mouse left');
+        $('.triangle, .square, .hollowSquare, .circleStripes, .cross, .hollowTraingle, .triangleStripes, .hollowTraingle, .zigzag, .zigzagTwo').removeClass("move");
     });
 });
 
 
-// $(".rotate").click(function(){
-//     $(this).toggleClass("down"); 
-// });
